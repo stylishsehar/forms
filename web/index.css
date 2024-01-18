@@ -1,0 +1,164 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: url("13.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+header .navbar{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin:0 auto ;
+    justify-content: space-between;
+}
+.navbar .logo{
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.navbar .logo span{
+    color:#c06b3e;
+}
+.navbar .menu-links{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.navbar a{
+    color: white;
+    text-decoration: none ;
+    transition: 0.2s ease;
+}
+.navbar a:hover{
+    color: #c06b3e;
+}
+.he-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.he-section .content{
+    color: white;
+    max-width: 1000px;
+    /* width: 2000%;
+    margin: 0 auto; */
+}
+.he-section .content h1{
+    font-size: 3rem;
+    font-weight: 600px;
+    text-shadow: 3px 3px 2px rgb(228, 210, 210);
+    color: #642812;
+}
+
+.he-section .content p{
+    font-weight: 300;
+    margin-top: 15px;
+    min-width: 600px;
+}
+.he-section .content button{
+    background-color: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 6px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.he-section .content button:hover{
+    color: white;
+    background-color: #c06b3e;
+}
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #c06b3e;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+#menu-btn{
+    color: white;
+    cursor: pointer;
+}
+#close-menu-btn{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+    .navbar .menu-links{
+        position: fixed;
+        left: 0;
+        top: 0;
+     flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: white;
+        padding: 70px 40px 0;
+    }
+    .navbar a{
+        color:black;
+
+
+    }
+}
